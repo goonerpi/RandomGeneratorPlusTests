@@ -35,7 +35,7 @@ class TestLongRunOfOnes{
 
 
         for (i in 0..K)
-            ksi += (categories[i] - N * pi[i]) / N / pi[i]
+            ksi += (categories[i] - N * pi[i]) * (categories[i] - N * pi[i]) / N / pi[i]
 
         pValue = regularizedGammaQ(K/2.0, ksi/2)
 
