@@ -16,8 +16,8 @@ fun readFromFile(readFrom : String) : String{
 
 class CoolMatrix(index: Int) {
 
-    var size : Int
-    var A : Array<Array<Int?>>
+    private var size : Int
+    private var A : Array<Array<Int?>>
 
     init{
         size = TestBMR.M
@@ -88,7 +88,6 @@ class CoolMatrix(index: Int) {
                     for (j in i-1 downTo 0)
                         if (A[j][i] == 1)
                             xorRows(i,j)
-                    //printMatrix()
                 }
                 0 -> {
                     for (j in i-1 downTo 0)
@@ -97,7 +96,6 @@ class CoolMatrix(index: Int) {
                             isEdited = true
                             break
                         }
-                    //printMatrix()
                 }
             }
             if (!isEdited) i--
@@ -130,10 +128,6 @@ class TestBMR {
         var c = readFromFile(OUTPUT_BINARY_FORM).length
         var N = c / M / Q
         val binary = readFromFile(OUTPUT_BINARY_FORM)
-    }
-
-    init {
-
         /*val test = Array(6){ arrayOfNulls<Int>(6) }
         test[0] = arrayOf(1,0,0,0,0,0)
         test[1] = arrayOf(0,0,0,0,0,1)
@@ -141,6 +135,11 @@ class TestBMR {
         test[3] = arrayOf(1,0,1,0,1,0)
         test[4] = arrayOf(0,0,1,0,1,1)
         test[5] = arrayOf(0,0,0,0,1,0)*/
+
+    }
+
+    init {
+
         var fMax = 0
         var fMaxMinusOne = 0
         var remain = 0
@@ -158,22 +157,29 @@ class TestBMR {
 
         val magic = (fMax - 0.2888 * N).pow(2)/(0.2888 * N) + (fMaxMinusOne - 0.5776 * N).pow(2)/(0.5776 * N) + (remain - 0.1336 * N).pow(2)/(0.1336 * N)
         val pValue = exp(-magic / 2)
-        
-        println("------------------------------\n" +
+
+        println("\n--------------------------------\n" +
+                "    BINARY MATRIX RANK TEST\n" +
+                "--------------------------------\n" +
+                "Note: ${c - N*M*Q} bits will be discarded\n" +
+                "--------------------------------\n" +
                 "c: $c\n" +
                 "N: $N\n" +
+                "--------------------------------\n" +
                 "fMax: $fMax\n" +
                 "fMaxMinusOne: $fMaxMinusOne\n" +
                 "remain: $remain\n" +
+                "--------------------------------\n" +
                 "magic: $magic\n" +
                 "pValue: $pValue\n" +
-                "------------------------------")
+                "--------------------------------")
 
         when {
             pValue <= 0.01 -> println("The value is NOT Random!\n" +
-                    "------------------------------")
+                    "--------------------------------")
             else -> println("The value is Random!\n" +
-            "------------------------------")
+            "--------------------------------\n" +
+            "################################")
         }
 
     }
