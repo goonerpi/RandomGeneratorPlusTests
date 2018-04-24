@@ -125,9 +125,9 @@ class TestBMR {
     companion object Settings {
         const val M = 32
         const val Q = 32
-        var c = readFromFile(OUTPUT_BINARY_FORM).length
+        var c = readFromFile(INPUT).length
         var N = c / M / Q
-        val binary = readFromFile(OUTPUT_BINARY_FORM)
+        val binary = readFromFile(INPUT)
         /*val test = Array(6){ arrayOfNulls<Int>(6) }
         test[0] = arrayOf(1,0,0,0,0,0)
         test[1] = arrayOf(0,0,0,0,0,1)

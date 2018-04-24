@@ -2,6 +2,7 @@ const val OUTPUT_BINARY_FORM = "C:\\Users\\pavel\\IdeaProjects\\RandomGeneratorP
 const val OUTPUT_DECIMAL_FORM = "C:\\Users\\pavel\\IdeaProjects\\RandomGeneratorPlusTests\\src\\decimal.txt"
 const val DATA_E = "C:\\Users\\pavel\\IdeaProjects\\RandomGeneratorPlusTests\\src\\data_e.txt"
 const val DATA_PI = "C:\\Users\\pavel\\IdeaProjects\\RandomGeneratorPlusTests\\src\\data_pi.txt"
+const val INPUT = OUTPUT_BINARY_FORM
 
 fun main(args : Array<String>){
 

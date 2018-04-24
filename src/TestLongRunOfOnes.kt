@@ -3,8 +3,8 @@ import org.apache.commons.math3.special.Gamma.regularizedGammaQ
 class TestLongRunOfOnes{
 
     companion object {
-        val binary = readFromFile(OUTPUT_BINARY_FORM)
-        val n = readFromFile(OUTPUT_BINARY_FORM).length
+        val binary = readFromFile(INPUT)
+        val n = readFromFile(INPUT).length
         const val M = 10000
         const val K = 6
         const val N = 75

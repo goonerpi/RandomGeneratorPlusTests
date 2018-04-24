@@ -8,13 +8,13 @@ class TestMaurer{
 
     /** Parameters are selected for n = 1000000 */
     companion object {
-        val n = readFromFile(OUTPUT_BINARY_FORM).length
+        val n = readFromFile(INPUT).length
         const val L = 7
         const val Q = 1280
         val K = n / L - Q
         const val expectedValue = 6.1962507
         const val variance = 3.125
-        val binary = readFromFile(OUTPUT_BINARY_FORM)
+        val binary = readFromFile(INPUT)
     }
 
     private val lastIndexArray : Array<Int>
